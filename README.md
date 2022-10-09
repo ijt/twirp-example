@@ -8,8 +8,8 @@ Twirp at its [website](https://twitchtv.github.io/twirp/docs/intro.html) or
 
 First, download this repo with the Go tool:
 ```
-go get github.com/twitchtv/twirp-example/...
-cd $GOPATH/src/github.com/twitchtv/twirp-example
+git clone git@github.com:ijt/twirp-example.git
+cd twirp-example
 ```
 
 Next, try building the client and server binaries:

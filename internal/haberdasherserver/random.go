@@ -17,8 +17,8 @@ import (
 	"context"
 	"math/rand"
 
+	"github.com/ijt/twirp-example/rpc/haberdasher"
 	"github.com/twitchtv/twirp"
-	"github.com/twitchtv/twirp-example/rpc/haberdasher"
 )
 
 // New returns a new Haberdasher which returns random Hats of the requested
@@ -32,7 +32,7 @@ func New() *randomHaberdasher {
 // logic" lives.
 type randomHaberdasher struct{}
 
-func (h *randomHaberdasher) MakeHat(ctx context.Context, size *haberdasher.Size) (*haberdasher.Hat, error) {
+func (h *randomHaberdasher) MakeHat(_ context.Context, size *haberdasher.Size) (*haberdasher.Hat, error) {
 	// When returning an error, it's best to use the error constructors defined in
 	// the Twirp package so that the client gets a well-structured error response.
 	if size.Inches <= 0 {
